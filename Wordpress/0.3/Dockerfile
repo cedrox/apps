@@ -50,7 +50,7 @@ ENV PHPMYADMIN_SOURCE "/usr/src/phpmyadmin"
 ENV PHPMYADMIN_HOME "/home/phpmyadmin"
 
 # wordpress
-ENV WORDPRESS_VERSION "4.8"
+ENV WORDPRESS_VERSION "4.9.4"
 ENV WORDPRESS_DOWNLOAD_URL "https://wordpress.org/wordpress-$WORDPRESS_VERSION.tar.gz"
 ENV WORDPRESS_SHA1 "3738189a1f37a03fb9cb087160b457d7a641ccb4"
 ENV WORDPRESS_SOURCE "/usr/src/wordpress"
