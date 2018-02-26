@@ -63,6 +63,22 @@ On Webssh run the command below to check if the startup logs from entrypoint.sh 
 	#Replace example with your actual log file name.
 	cat /home/LogFiles/2017_10_10_RDXXXXXX_docker.log
 ```
+## Run it locally
+in proper folder
+
+docker run -d -p 3193:80 --name experiences-wp-04__010d_0 -e WEBSITE_SITE_NAME=experiences-wp-04 -e WEBSITE_AUTH_ENABLED=False -e PORT=82 -e WEBSITE_ROLE_INSTANCE_ID=0 -e WEBSITE_INSTANCE_ID=7b89f683aeb1f8031b4dc6bac7ff8f5fb48212d644fb8a8b2ba7a2fd92dde873 experiences.azurecr.io/appsvc/apps:latest  
+
+docker run --rm -it -p 3193:80 --name experiences-wp-04__010d_0 -e WEBSITE_SITE_NAME=experiences-wp-04 -e WEBSITE_AUTH_ENABLED=False -e PORT=82 -e IMAGE=cedrox/apps:latest
+
+docker run cedrox/apps:latest --rm -it -p 80:82 --name experiences-wp-04-local -e PORT=82 
+
+
+ -e WEBSITE_AUTH_ENABLED=False 
+
+
+docker run --rm -v C:/Users/quine/Source/docker-data/nginx/wwwroot:/home/site/wwwroot/ -it -p 80:81 nginx:1.13 
+
+
 
 ## Change Log
 - **Version 0.4**

@@ -2,6 +2,11 @@
 
 Nginx Image for serving Static HTML Apps or Single Page Applications(React,Angular) using Azure App Service Linux
 
+### Run it on port 81
+docker run --rm -it -p 81:80 nginx:1.13
+>> Avec volume
+docker run --rm -v C:/Users/quine/Source/docker-data/nginx/wwwroot:/home/site/wwwroot/ -it -p 80:81 nginx:1.13 
+
 ### Benefits:
 - Image Size < 70MB
 - Easy to Use/Understand/Configure
