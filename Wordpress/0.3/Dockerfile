@@ -261,7 +261,8 @@ RUN set -ex \
 	# 9. Install & configure locale
 	# ------
 	&& apt-get update && apt-get install -y locales \
-	&& locale-gen fr_FR.UTF-8 \
+	&& locale-gen fr_FR.utf8 \
+	&& update-locale LANG=fr_FR.utf8 \
 
 	# ----------
 	# ~. clean up
