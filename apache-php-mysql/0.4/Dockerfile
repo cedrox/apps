@@ -234,6 +234,12 @@ RUN set -ex \
 	&& apt-get install -y --no-install-recommends openssh-server \
 	&& echo "$SSH_PASSWD" | chpasswd \
 
+	# ------
+	# 7. Install & configure locale
+	# ------
+	&& apt-get update && apt-get install -y locales
+	&& locale-gen fr_FR.UTF-8
+
 	# -----------
 	# ~. clean up
 	# -----------
